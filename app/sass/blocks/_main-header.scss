@@ -1,0 +1,27 @@
+.main-header {
+  width: 100%;
+
+  .main-header-background-wrapper {
+    min-height: 500px;
+    background-color: #fbfbfb;
+    background-image: url("../img/main-header/header-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    //time
+
+  }
+
+  .main-header__title {
+    margin: 0;
+    padding: 30px;
+    color: $bold-text-color;
+  }
+
+  .main-header__catalog {
+    margin: 0;
+
+  }
+
+
+
+}

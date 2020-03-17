@@ -1,0 +1,28 @@
+.toys-catalog {
+  padding: 0;
+  list-style: none;
+
+  .toys-catalog__item {
+    padding: 31px 30px;
+  }
+
+  .toys-catalog__item--lighten {
+    background-color: #63d1bb;
+  }
+
+  .toys-catalog__item--darken {
+    background-color: #56c3b2;
+  }
+
+  .toys-catalog__link {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+  }
+
+}

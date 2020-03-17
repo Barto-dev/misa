@@ -1,0 +1,18 @@
+.characteristics-list {
+  display: flex;
+  flex-wrap: wrap;
+
+
+
+  .characteristics-list__name {
+    width: 40%;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .characteristics-list__definition {
+    width: 60%;
+    margin: 0;
+    border-bottom: 1px solid #ececec;
+
+  }
+}
