@@ -17,6 +17,12 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
-    "imagemin-pngquant": "^8.0.0"
+    "gulp-stylelint": "^13.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "stylelint": "^13.2.1",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.15.0"
   }
 }
