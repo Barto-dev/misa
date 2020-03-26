@@ -22,4 +22,31 @@
     text-decoration: none;
   }
 
+  .site-navigation__free-delivery {
+    display: none;
+  }
+}
+
+@media (min-width: $medium-width) {
+  .site-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+
+    .site-navigation__item--border-bottom {
+      order: -1;
+    }
+
+  }
+
+  .site-navigation--order {
+    order:-1;
+  }
+
+
+  .site-navigation--upper {
+    margin-left: auto;
+  }
+
+
 }

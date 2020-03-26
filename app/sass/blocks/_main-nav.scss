@@ -1,0 +1,25 @@
+.main-nav {
+  .main-nav__free-delivery {
+    display: none;
+  }
+}
+
+
+
+
+
+@media (min-width: $medium-width) {
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+
+    .main-nav__free-delivery {
+    display: block;
+    width: 40%;
+  }
+  }
+
+
+}

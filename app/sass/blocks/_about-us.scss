@@ -1,5 +1,5 @@
 .about-us {
-  width: 81.25%;
+  width: 260px;
   margin: 0 auto;
 
   .about-us__title {
@@ -16,7 +16,7 @@
   }
 
   .about-us__list-item {
-
+    padding-top: 20px;
   }
 
   .about-us__item-name {
@@ -24,5 +24,28 @@
     font-weight: 700;
     line-height: 20px;
     color: $bold-text-color;
+  }
+}
+
+@media (min-width: $medium-width) {
+  .about-us {
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  .about-us__list {
+    width: 40%;
+  }
+
+  .about-us__list-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $large-width) {
+  .about-us {
+    width: 1250px;
+    padding: 0 275px;
   }
 }
