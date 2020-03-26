@@ -1,26 +1,34 @@
 @mixin myOutline ($color:blue){
   position: relative;
   z-index: 10;
-  outline: 4px solid $color;
   background-color: transparent !important;
   background-image: linear-gradient(rgba($color, 0.3),rgba($color ,0.3)) !important;
+  outline: 4px solid $color;
   opacity: 0.9;
   transition: all 0.4s ;
 
   &:hover {
-    outline: 6px solid $color;
     background-image: linear-gradient(rgba($color, 0.5),rgba($color ,0.5)) !important;
+    outline: 6px solid $color;
   }
 
   &::after {
-    content: attr(class);
     position: absolute;
-    z-index: 20;
-    font-size: 20px;
-    font-family: monospace;
     top: 10px;
     left: 10px;
+    z-index: 20;
+    font-family: monospace;
+    font-size: 20px;
     color: complement($color);
+    content: attr(class);
     opacity: 1;
   }
+}
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+
 }

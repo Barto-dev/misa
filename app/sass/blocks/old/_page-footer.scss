@@ -1,0 +1,90 @@
+.page-footer {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.contacts {
+
+  .contacts__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $bold-text-color;
+  }
+
+  .contacts__email {
+    margin: 0;
+    font-size: 15px;
+    color: $text-color;
+  }
+
+  .contacts__email-desc--bottom-line {
+    display: inline-block;
+    border-bottom: 1px solid $main-color;
+  }
+
+  .contacts__address {
+    margin: 0;
+    font-size: 15px;
+    color: $text-color;
+  }
+}
+
+.map {
+  height: 460px;
+  background-image: url(../img/page-footer/map-mobile.jpg);
+
+}
+
+.social {
+
+  .social__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+}
+
+@media (min-width: $medium-width) {
+  .page-footer {
+    width: 768px;
+  }
+
+  .page-footer__send-button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+
+  }
+
+  .contacts__title {
+    width: 100%;
+  }
+
+  .contacts__email {
+    width: 50%;
+  }
+
+  .contacts__address {
+    width: 50%;
+  }
+
+  .page-footer__social-wrapper {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: $large-width) {
+  .page-footer {
+    width: 1250px;
+    padding: 0 100px;
+  }
+}
