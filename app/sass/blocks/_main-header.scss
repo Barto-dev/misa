@@ -159,10 +159,9 @@
 
 
 @media (min-width: $large-width) {
-  //.main-header {
-  //  padding-right: 100px;
-  //  padding-left: 100px;
-  //}
+  .main-nav {
+    padding: 0 100px;
+  }
   .main-nav__logo-wrapper {
     margin-right: 0;
     flex-grow: 0;
@@ -176,7 +175,9 @@
 
   .main-nav__delivery {
     order: 4;
-    padding-right: 100px;
+    padding-right: 0;
+    background-color: transparent;
+    border-top: none;
   }
 }
 /*****************************************************/
@@ -239,7 +240,7 @@
 
 @media (min-width: $large-width) {
   .site-navigation {
-    padding-left: 100px;
+    padding-left: 0;
     margin-right: 39px;
     font-size: 17px;
     width: auto;
@@ -354,9 +355,13 @@
 
 @media (min-width: $large-width) {
   .user-navigation {
-    margin-left: 100px;
+
+    margin-left: auto;
     font-size: 17px;
     order: 2;
+  }
+  .user-navigation__link--padding-reset {
+    padding-right: 0;
   }
 }
 
@@ -375,9 +380,6 @@
     font-weight: 700;
     display: flex;
     order: 3;
-    border-top: 1px solid $under-border-color;
-    background-color: #f9f9f9;
-    padding-left: 100px;
   }
 
   .good-deal__item {
