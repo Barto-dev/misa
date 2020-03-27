@@ -3,13 +3,13 @@
   z-index: 10;
   background-color: transparent !important;
   background-image: linear-gradient(rgba($color, 0.3),rgba($color ,0.3)) !important;
-  outline: 4px solid $color;
+  outline: 2px solid $color;
   opacity: 0.9;
   transition: all 0.4s ;
 
   &:hover {
     background-image: linear-gradient(rgba($color, 0.5),rgba($color ,0.5)) !important;
-    outline: 6px solid $color;
+    outline: 4px solid $color;
   }
 
   &::after {

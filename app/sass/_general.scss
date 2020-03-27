@@ -13,19 +13,17 @@ html {
 }
 
 body {
-  max-width: 320px;
+  min-width: 320px;
+  max-width: 1250px;
   margin: 0 auto;
   font-family: 'Open Sans', 'Arial',sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 30px;
 
-  @media (min-width: $medium-width) {
-    width: 768px;
-  }
 
   @media (min-width: $large-width) {
-    width: 1250px;
+
   }
 
 }
