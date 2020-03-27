@@ -18,13 +18,15 @@
   border-bottom: 1px solid $under-border-color;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   .main-nav__logo-wrapper {
+     justify-content: flex-start;
+   }
+}
+
 .main-nav__logo {
-  flex-basis: 85px;
   margin: 0 auto;
-  //margin-right: 61px;
   text-decoration: none;
-
-
 
 
   &:hover {
@@ -157,10 +159,14 @@
 
 
 @media (min-width: $large-width) {
+  //.main-header {
+  //  padding-right: 100px;
+  //  padding-left: 100px;
+  //}
   .main-nav__logo-wrapper {
+    margin-right: 0;
     flex-grow: 0;
     order: 1;
-    margin-right: 0;
     padding: 8px 0 0 0;
   }
   .main-nav__logo-image {
@@ -348,7 +354,7 @@
 
 @media (min-width: $large-width) {
   .user-navigation {
-    padding-left: 100px;
+    margin-left: 100px;
     font-size: 17px;
     order: 2;
   }
