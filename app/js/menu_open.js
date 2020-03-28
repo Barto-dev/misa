@@ -11,5 +11,5 @@ toggleButton.addEventListener("click", function () {
     navigation.classList.remove("main-nav--opened");
     navigation.classList.add("main-nav--closed")
   }
-})
+});
 

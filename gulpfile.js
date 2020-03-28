@@ -12,7 +12,7 @@ var gulp        = require('gulp'), // Подключаем Gulp
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.scss') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-        .pipe(autoprefixer(['>1%', {cascade:true}]))
+        .pipe(autoprefixer(['last 15 versions']))
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
