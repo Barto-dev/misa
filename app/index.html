@@ -15,11 +15,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
 </head>
-<body>
-
+<body class="main-container">
 
 <header class="main-header">
-  <nav class="main-nav main-nav--closed">
+  <nav class="main-nav main-nav--closed main-nav--nojs">
     <div class="main-nav__logo-wrapper">
       <a href="index.html" class="main-nav__logo">
         <picture>
@@ -69,12 +68,71 @@
     </ul>
     <p class="main-nav__delivery">Бесплатная доставка по России</p>
   </nav>
+
+  <section class="category-section">
+    <div class="category-section__wrapper">
+      <h2 class="category-section__title">Милые штуки <br> ручной <br> работы для дома</h2>
+      <ul class="category-section__list">
+        <li class="category-section__item">
+          <a href="" class="category-section__link category-section__link--lamp">Предметы <br>
+            интерьера
+          </a>
+        </li>
+        <li class="category-section__item">
+          <a href="" class="category-section__link category-section__link--cube">Детские <br>
+            игрушки
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
 </header>
 
-<script>svg4everybody(); // run it now or whenever you are ready</script>
+<script>svg4everybody();</script>
 
-<!--<main class="page-main">-->
-<!--  <h1 class="visually-hidden">Магазин игрушек Мишка</h1>-->
+<main class="main-page">
+  <h1 class="visually-hidden">Магазин игрушек Мишка</h1>
+  <section class="week-product">
+    <div class="week-product__container">
+      <h2 class="week-product__title">Вязаные корзинки</h2>
+      <div class="week-product__iner-wrapper"><h3 class="week-product__subtitle">ТОВАР <br> НЕДЕЛИ</h3>
+        <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <dl class="week-product__characteristics characteristics-list">
+          <dt class="characteristics-list__name">Цвет:</dt>
+          <dd class="characteristics-list__definition">«Тиффани»/серый</dd>
+          <dt class="characteristics-list__name">Диаметр:</dt>
+          <dd class="characteristics-list__definition">25 см</dd>
+          <dt class="characteristics-list__name">Высота:</dt>
+          <dd class="characteristics-list__definition">15 см</dd>
+        </dl>
+        <picture>
+          <source media="(min-width:768px)"
+                  srcset="img/week-product/week-product-tablet1X.jpeg 1x, img/week-product/week-proruct-tablet2X.jpeg 2x">
+          <img src="img/week-product/week-product-mobile1X.jpeg" alt="товар недели" class="week-product__image"
+               srcset="img/week-product/week-proruct-mobile2X.jpeg 2x">
+        </picture>
+        <span class="week-product__price">Цена: 990 руб.</span>
+        <button class="button week-product__button">Заказать</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--  <section class="week-product">-->
 <!--    <header class="week-product__header">-->
 <!--      <h2 class="week-product__title">Вязаные корзинки</h2>-->
@@ -82,14 +140,7 @@
 <!--    </header>-->
 <!--    <div class="week-product__wrapper">-->
 <!--      <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>-->
-<!--      <dl class="characteristics-list">-->
-<!--        <dt class="characteristics-list__name">Цвет:</dt>-->
-<!--        <dd class="characteristics-list__definition">«Тиффани»/серый</dd>-->
-<!--        <dt class="characteristics-list__name">Диаметр:</dt>-->
-<!--        <dd class="characteristics-list__definition">25 см</dd>-->
-<!--        <dt class="characteristics-list__name">Высота:</dt>-->
-<!--        <dd class="characteristics-list__definition">15 см</dd>-->
-<!--      </dl>-->
+
 <!--      <img src="img/main-header/week-product.jpg" alt="Фотография товара недели" class="week-product__image"-->
 <!--           width="260" height="315">-->
 <!--      <p class="week-product__price">Цена: 990 руб.</p>-->
