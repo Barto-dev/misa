@@ -3,6 +3,9 @@ let toggleButton = document.querySelector(".main-nav__button-toggle");
 let siteNavigation = document.querySelector(".site-navigation");
 let userNavigation = document.querySelector(".user-navigation");
 
+//Удаляет если в браузере включен JS, иначе мобильное меню всегда будет доступно
+navigation.classList.remove("main-nav--nojs");
+
 toggleButton.addEventListener("click", function () {
   if (navigation.classList.contains("main-nav--closed")) {
     navigation.classList.remove("main-nav--closed");
