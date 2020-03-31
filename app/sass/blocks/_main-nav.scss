@@ -1,3 +1,8 @@
+.main-nav {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
 .main-nav__logo-wrapper {
   display: flex;
   align-items: center;
@@ -8,9 +13,10 @@
 
 //Для коректного отображения мобильного меню на ie11
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   .main-nav__logo-wrapper {
-     justify-content: flex-start;
-   }
+
+  .main-nav__logo-wrapper {
+    justify-content: flex-start;
+  }
 }
 
 .main-nav__logo {
@@ -97,6 +103,18 @@
   .main-nav--closed .user-navigation {
     display: none;
   }
+
+   .main-nav--nojs .site-navigation {
+     display: block;
+   }
+
+  .main-nav--nojs .user-navigation {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__button-toggle {
+    display: none;
+  }
 }
 
 @media (min-width: $medium-width) {
@@ -125,6 +143,7 @@
     width: 113px;
     height: 46px;
   }
+
   .main-nav__button-toggle {
     display: none;
   }
@@ -144,6 +163,7 @@
     border-top: 1px solid $under-border-color;
 
   }
+
 }
 
 

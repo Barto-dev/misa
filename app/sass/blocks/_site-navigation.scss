@@ -26,8 +26,8 @@
 }
 
 @media (min-width: $medium-width) {
+
   .site-navigation {
-    display: flex;
     display: flex;
     //@include myOutline(green);
     order: 2;
@@ -49,12 +49,12 @@
 
   .site-navigation__link {
     flex-basis: auto;
-    padding: 0;
     padding: 17px 0 25px 0;
   }
 }
 
 @media (min-width: $large-width) {
+
   .site-navigation {
     order: 0;
     width: auto;
