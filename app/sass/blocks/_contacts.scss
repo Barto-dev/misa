@@ -2,7 +2,7 @@
   max-width: 320px;
   margin: 0 auto;
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 38px;
 }
 
 .contacts__address-wrapper {
@@ -31,6 +31,14 @@
   text-decoration: none;
   font-weight: 400;
   color: $text-color;
+
+  &:hover {
+    color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__address {
@@ -62,6 +70,7 @@
   .contacts {
     max-width: 768px;
     padding-top: 75px;
+    padding-bottom: 56px;
   }
 
   .contacts__address-wrapper {
