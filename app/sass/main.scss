@@ -1,5 +1,6 @@
 //General
 @import "variables";
+@import "animation";
 @import "general";
 @import "mixins";
 
@@ -17,6 +18,11 @@
 @import "blocks/about-us";
 @import "blocks/reviews";
 @import "blocks/contacts";
+//Footer
 @import "blocks/main-footer";
-
+@import "blocks/social";
+@import "blocks/developer";
+//Modal
+@import "blocks/modal-overlay";
+@import "blocks/modal-order";
 

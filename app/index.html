@@ -201,7 +201,7 @@
           </span>
         </p>
     </div>
-    <div class="contacts__map" aria-label="Адрес: г. Санкт-Петербург,
+    <div id="map" class="contacts__map" aria-label="Адрес: г. Санкт-Петербург,
       ул. Большая
       Конюшенная,
       д. 19/8, офис 101">
@@ -257,7 +257,41 @@
   </div>
 </footer>
 
+<div class="modal-overlay"></div>
+<div class="modal-order modal-close-animation">
+  <h2 class="modal-order__title">Добавить в&nbsp;корзину</h2>
+  <form action="https://echo.htmlacademy.ru" class="modal-order__form" method="get">
+    <fieldset>
+      <legend class="modal-order__form-name">Выберите размер:</legend>
+      <ul class="size-list">
+        <li class="size-list__item">
+          <label>
+            <input class="size-list__radio-button visually-hidden" type="radio" name="size" value="S" checked>
+            <span class="size-list__button">S</span>
+          </label>
+        </li>
+        <li class="size-list__item">
+          <label>
+            <input class="size-list__radio-button visually-hidden" type="radio" name="size" value="M">
+            <span class="size-list__button">M</span>
+          </label>
+        </li>
+        <li class="size-list__item">
+          <label>
+            <input class="size-list__radio-button visually-hidden" type="radio" name="size" value="L">
+            <span class="size-list__button">L</span>
+          </label>
+        </li>
+      </ul>
+      <button class="modal-order__add-button button" type="submit">Добавить</button>
+    </fieldset>
+  </form>
+</div>
+
 <script>svg4everybody();</script>
 <script src="js/menu_open.js"></script>
+<script src="js/google-map.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHp_FJw4ikmziBInoUolZxFCdT68WGeik&callback=initMap"> </script>
 </body>
 </html>
