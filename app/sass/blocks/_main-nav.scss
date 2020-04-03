@@ -36,6 +36,7 @@
 .main-nav__logo-image {
   width: 86px;
   height: 35px;
+  margin-bottom: 10px;
 }
 
 .main-nav__button-toggle {
@@ -175,7 +176,7 @@
   .main-nav__logo-wrapper {
     flex-grow: 0;
     order: 1;
-    padding: 8px 0 0 0;
+    padding: 8px 0 0;
     margin-right: 0;
   }
   .main-nav__logo-image {

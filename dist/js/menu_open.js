@@ -48,7 +48,7 @@ if (modal && overlay && openModal) {
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-      closeModal();
+      closeModal;
     }
   });
 

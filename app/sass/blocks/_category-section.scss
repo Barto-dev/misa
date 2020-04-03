@@ -2,7 +2,6 @@
 
   margin: 0 auto;
   background-color: #fafafa;
-
 }
 
 .category-section__wrapper {
@@ -178,8 +177,13 @@
   }
 }
 
-//font-family: OpenSans
-//font-size: 53px
-//line-height: 57px
-//font-weight: 700
-//color: #000000
+//inner-page
+.category-section__wrapper--no-image {
+  background-image: none;
+  padding-bottom: 72px;
+
+  .category-section__title {
+    margin-bottom: 0;
+  }
+}
+

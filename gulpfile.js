@@ -20,11 +20,12 @@ gulp.task('sass', function(){ // Создаем таск Sass
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         server: { // Определяем параметры сервера
-            baseDir: 'app' // Директория для сервера - app
+            baseDir: 'app'// Директория для сервера - app
         },
         notify: false // Отключаем уведомления
     });
 });
+
 
 // gulp.task('css-libs', function () {
 //   return gulp.src('app/css/libs.css')
@@ -32,12 +33,14 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 //   .pipe(rename({suffix:'.min'}))
 //   .pipe(gulp.dest('app/css'))
 // });
+
 gulp.task('img', function() {
     return gulp.src('app/img/**/*') // Берем все изображения из app
         .pipe(cache(imagemin({ // С кешированием
         // .pipe(imagemin({ // Сжимаем изображения без кеширования
             interlaced: true,
             progressive: true,
+            optimizationLevel: 3,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))/**/)
