@@ -34,6 +34,14 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 //   .pipe(gulp.dest('app/css'))
 // });
 
+gulp.task('css-libs', function () {
+  return gulp.src('app/css/*.css')
+  .pipe(cssnano())
+  .pipe(rename({suffix:'.min'}))
+  .pipe(gulp.dest('app/css'))
+});
+
+
 gulp.task('img', function() {
     return gulp.src('app/img/**/*') // Берем все изображения из app
         .pipe(cache(imagemin({ // С кешированием
@@ -73,7 +81,7 @@ gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch'));
 gulp.task('prebuild', async function() {
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-        'app/css/main.css'
+        'app/css/main.min.css'
         ])
     .pipe(gulp.dest('dist/css'))
 

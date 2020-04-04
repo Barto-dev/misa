@@ -22,18 +22,23 @@ toggleButton.addEventListener("click", function () {
 //Modal window
 let modal = document.querySelector(".modal-order");
 let overlay = document.querySelector(".modal-overlay");
+//Получаем массив всех кнопок которые могут открыть модальное окно
 let openModal = document.querySelectorAll(".js-open-modal");
 
 if (modal && overlay && openModal) {
 
   let closeModal = function() {
-      //Добавляет анимацию закрытия так как изначально она удаляется при git  открытии модального окна.
+    //сработает только если клас не содержит анимацию закрытия, фиксит повторное
+    // открытие при быстром нажатии клавиш esc
+    if (!modalg.classList.contains("modal-close-animation")) {
+      //Добавляет анимацию закрытия так как изначально она удаляется при открытии модального окна.
       modal.classList.toggle("modal-close-animation");
       //через 0.4секунды после проигрывания анимации, убирает класс   открытия окна и потом прячет оверелей
       setTimeout(function () {
         modal.classList.toggle("modal-opened");
       }, 400);
       overlay.classList.toggle("modal-overlay-opened");
+    }
   };
 
   for (let i=0; i<openModal.length; i++) {
@@ -48,6 +53,7 @@ if (modal && overlay && openModal) {
       modal.classList.toggle("modal-close-animation");
     });
   };
+
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
