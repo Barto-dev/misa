@@ -96,7 +96,6 @@
     &::after {
       content: "";
       position: absolute;
-      //top: 570px;
       bottom: -2px;
       right: 1px;
       width: 100%;
@@ -159,6 +158,13 @@
 
   .category-section {
     border-top: 1px solid $under-border-color;
+
+
+    &::after {
+      background-size: 1150px 34px;
+      height: 34px;
+      background-image: url("../img/main-header/desktop-zigzag.svg");
+    }
   }
 
   .category-section__title {
@@ -182,8 +188,23 @@
   background-image: none;
   padding-bottom: 72px;
 
+
   .category-section__title {
     margin-bottom: 0;
   }
 }
 
+@media (min-width: $medium-width) {
+
+  .category-section__wrapper--no-image {
+    padding-top: 93px;
+    padding-bottom: 88px;
+  }
+}
+
+@media (min-width: $large-width) {
+
+  .category-section__wrapper--no-image {
+    padding-bottom: 115px;
+  }
+}

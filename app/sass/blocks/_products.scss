@@ -1,7 +1,7 @@
 .products {
   max-width: 320px;
   margin: 0 auto;
-  padding: 32px 30px;
+  padding: 32px 30px 30px;
 }
 
 .products__list {
@@ -14,6 +14,10 @@
 
     &:hover {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -33,7 +37,7 @@
 
   .products {
     max-width: 1150px;
-    padding: 115px 50px 9px;
+    padding: 115px 50px 0;
   }
 
   .products__list {
@@ -43,6 +47,9 @@
 
   .products__item {
     display: flex;
+
+    &:last-child {
+      margin-bottom: 54px;}
   }
 }
 
