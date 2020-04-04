@@ -22,12 +22,12 @@ toggleButton.addEventListener("click", function () {
 //Modal window
 let modal = document.querySelector(".modal-order");
 let overlay = document.querySelector(".modal-overlay");
-let openModal = document.querySelector(".week-product__button");
+let openModal = document.querySelectorAll(".js-open-modal");
 
 if (modal && overlay && openModal) {
 
   let closeModal = function() {
-      //Добавляет анимацию закрытия так как изначально она удаляется при     открытии модального окна.
+      //Добавляет анимацию закрытия так как изначально она удаляется при git  открытии модального окна.
       modal.classList.toggle("modal-close-animation");
       //через 0.4секунды после проигрывания анимации, убирает класс   открытия окна и потом прячет оверелей
       setTimeout(function () {
@@ -36,15 +36,18 @@ if (modal && overlay && openModal) {
       overlay.classList.toggle("modal-overlay-opened");
   };
 
-  //Открытие модального окна при клике на кнопку заказать
-  openModal.addEventListener("click", function () {
-    //Открывает модальное окно (так как его изначально нету)
-    modal.classList.toggle("modal-opened");
-    //Открывает оверлей
-    overlay.classList.toggle("modal-overlay-opened");
-    //При открытии удаляет анимацию закрытия
-    modal.classList.toggle("modal-close-animation");
-  });
+  for (let i=0; i<openModal.length; i++) {
+    //Открытие модального окна при клике на кнопку заказать
+    openModal[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      //Открывает модальное окно (так как его изначально нету)
+      modal.classList.toggle("modal-opened");
+      //Открывает оверлей
+      overlay.classList.toggle("modal-overlay-opened");
+      //При открытии удаляет анимацию закрытия
+      modal.classList.toggle("modal-close-animation");
+    });
+  };
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
