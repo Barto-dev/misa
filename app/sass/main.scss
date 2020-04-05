@@ -1,8 +1,10 @@
 //General
 @import "variables";
+@import "mixins";
+@import "fonts";
 @import "animation";
 @import "general";
-@import "mixins";
+
 
 
 //Blocks
@@ -29,3 +31,5 @@
 //inner-page
 @import "blocks/products";
 @import "blocks/video";
+@import "blocks/order";
+
