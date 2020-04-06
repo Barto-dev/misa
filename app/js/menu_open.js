@@ -30,7 +30,7 @@ if (modal && overlay && openModal) {
   let closeModal = function() {
     //сработает только если клас не содержит анимацию закрытия, фиксит повторное
     // открытие при быстром нажатии клавиш esc
-    if (!modalg.classList.contains("modal-close-animation")) {
+    if (!modal.classList.contains("modal-close-animation")) {
       //Добавляет анимацию закрытия так как изначально она удаляется при открытии модального окна.
       modal.classList.toggle("modal-close-animation");
       //через 0.4секунды после проигрывания анимации, убирает класс   открытия окна и потом прячет оверелей

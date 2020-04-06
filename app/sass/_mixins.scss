@@ -1,4 +1,4 @@
-@mixin myOutline ($color:blue){
+@mixin myOutline ($color:blue, $name: "1"){
   position: relative;
   z-index: 10;
   background-color: transparent !important;
@@ -20,15 +20,15 @@
     font-family: monospace;
     font-size: 20px;
     color: complement($color);
-    content: attr(class);
+    content: $name;
     opacity: 1;
   }
 }
+
+
 
 @mixin list-reset {
   padding: 0;
   margin: 0;
   list-style: none;
-
-
 }
