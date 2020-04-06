@@ -16,12 +16,12 @@
 
   .order {
     padding: 0;
-    padding-top: 20px;
+    padding-top: 65px;
   }
 
   .order__desc {
-    width: 612px;
-    margin: 0 auto;
+    width: 670px;
+    margin: 0 auto 57px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -263,7 +263,7 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  color: $main-color;
+  color: $text-color;
 }
 
 
@@ -275,14 +275,21 @@
 
   .form__fieldset--gray {
     background-color: #f1f1f1;
+    padding-top: 50px;
+    padding-bottom: 25px;
   }
+
 
   .form__wrapper {
     display: flex;
     width: 768px;
-    margin: 0 auto 20px;
+    margin: 0 auto 50px;
     padding: 0 50px;
-    border: 1px solid #000;
+  }
+
+  .form__margin-wrapper {
+    margin-top: 50px;
+    margin-bottom: 27px;
   }
 
   .form__inner-wrapper {
@@ -292,6 +299,7 @@
   .form__title {
     width: 70px;
     margin-right: 96px;
+    margin-top: 18px;
 
     &::after {
       display: none;
@@ -301,10 +309,14 @@
   .form__custom-input-text {
     font-size: 19px;
     line-height: 18px;
+    width: auto;
   }
 
   .form__input-name {
     background-color: transparent;
+    margin-left: 27px;
+    flex-grow: 1;
+    padding-left: 15px;
   }
 
   .form__input-name::placeholder {
@@ -317,7 +329,7 @@
   .form__custom-radio {
     width: 52px;
     height: 52px;
-    margin-right: 20px;
+    margin-right: 27px;
 
     &::after {
       width: 22px;
@@ -329,12 +341,22 @@
 
   //*********checkbox-button****
 
+
+  .form__choice-checkbox {
+    width: 200px;
+    margin-bottom: 23px;
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+
   .form__color--wrapper {
     margin-bottom: 0;
   }
 
   .form__checkbox-inner-wrapper {
-    width: 490px;
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
@@ -343,7 +365,7 @@
   .form__custom-checkbox {
     width: 52px;
     height: 52px;
-    margin-right: 20px;
+    margin-right: 28px;
 
     &::before {
       width: 27px;
@@ -357,31 +379,73 @@
       transform: rotate(-45deg);
     }
   }
+  //************name****
+
+  .form__name-wrapper {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 23px;
+  }
+
+  .form__grow-name-wrapper {
+    flex-grow: 1;
+  }
 
   //************contacts****
   .form__contacts-wrapper {
     flex-direction: row;
-    justify-content: space-between;
     width: 668px;
-  }
-
-  .form__contacts-icon--phone {
-    right: 10px;
-    top: 5px;
-  }
-
-  .form__contacts-icon--mail {
-    right: 5px;
-    top: 5px;
+    margin-bottom: 26px;
   }
 
   .form__input-contacts {
-    width: 465px;
+    margin-left: 0;
+    padding-bottom: 13px;
+  }
+
+  .form__contacts-icon--phone {
+    right: 27px;
+    top: 10px;
+  }
+
+  .form__contacts-icon--mail {
+    right: 23px;
+    top: 15px;
   }
 
   //*******textarea******
-  .form__text-input {
-    width: 500px;
+
+  .form__textarea-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 501px;
   }
 
+  .form__required-text {
+    text-align: right;
+    font-size: 17px;
+    line-height: 30px;
+    order: 1;
+  }
+
+  .form__text-input {
+    margin-bottom: 65px;
+  }
+
+  .form__submit-button {
+    order: 1;
+    align-self: flex-start;
+    margin-left: -165px;
+    margin-top: -70px;
+    width: 230px;
+  }
+}
+
+@media (min-width: $large-width) {
+
+  .form__wrapper {
+    width: 1050px;
+  }
 }
