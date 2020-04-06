@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 let navigation = document.querySelector(".main-nav");
 let toggleButton = document.querySelector(".main-nav__button-toggle");
@@ -41,7 +41,7 @@ if (modal && overlay && openModal) {
     }
   };
 
-  for (let i=0; i<openModal.length; i++) {
+  for (let i=0; i < openModal.length; i++) {
     //Открытие модального окна при клике на кнопку заказать
     openModal[i].addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -54,16 +54,42 @@ if (modal && overlay && openModal) {
     });
   };
 
-
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       closeModal();
     }
   });
-
   //При нажатии на оверлей, закрывает модалку, при нажатии на модалку, она не закроется потому что выше оверлея по
   // z-index
   overlay.addEventListener("click", closeModal);
 
+  //error submit animation
+  let modalForm = document.querySelector(".modal-order__form");
+  let sizeInput = document.querySelectorAll(".size-list__radio-button");
+
+  //Функция для проверки нажатия хоть одного radio-button
+  function checked(arr) {
+    let result = false;
+    for (let i=0; i<arr.length; i++) {
+      if(arr[i].checked) {
+        result = true
+      }
+    }
+    return result;
+  }
+
+  modalForm.addEventListener("submit", function (evt) {
+    if (!checked(sizeInput)) {
+      evt.preventDefault();
+      modal.classList.remove("modal-error");
+      modal.offsetWidth = modal.offsetWidth;
+      modal.classList.add("modal-error");
+    }
+  })
 }
+
+
+//Local storage
+
+
 
