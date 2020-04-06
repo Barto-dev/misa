@@ -23,6 +23,10 @@
   transform: scale(0);
 }
 
+.modal-error {
+  animation: shake 0.4s;
+}
+
 .modal-order__title {
   text-align: center;
   width: 145px;

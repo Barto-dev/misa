@@ -28,6 +28,44 @@
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); } }
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); } }
+
 *,
 *::before,
 *::after {
@@ -1428,6 +1466,10 @@ img {
       -ms-transform: scale(0);
           transform: scale(0); }
 
+.modal-error {
+  -webkit-animation: shake 0.4s;
+          animation: shake 0.4s; }
+
 .modal-order__title {
   text-align: center;
   width: 145px;
@@ -1561,7 +1603,6 @@ img {
     .products__item:last-child {
       margin-bottom: 54px; } }
 
-/*************************************/
 .card-product__info {
   padding: 27px 28px 8px;
   border: 1px solid #ededed; }
@@ -1616,6 +1657,15 @@ img {
     stroke: #63d1bb; }
   .card-product__basket:active {
     opacity: 0.3; }
+
+.card-product__basket-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+  .card-product__basket-button:focus {
+    outline: none; }
+  .card-product__basket-button:focus .card-product__basket {
+    stroke: #63d1bb; }
 
 @media (min-width: 768px) {
   .card-product {
@@ -1861,9 +1911,6 @@ img {
   .order__desc {
     width: 700px; } }
 
-/**********
-
-*****************************/
 .form__fieldset {
   margin: 0;
   padding: 0;
@@ -1910,7 +1957,9 @@ img {
   cursor: pointer;
   margin-bottom: 21px; }
   .form__choice-item:hover .form__custom-radio,
-  .form__choice-item:hover .form__custom-checkbox {
+  .form__choice-item:hover .form__custom-checkbox,
+  .form__choice-item .form__choice:focus + .form__custom-checkbox,
+  .form__choice-item .form__choice:focus + .form__custom-radio {
     border-color: #63d1bb; }
   .form__choice-item:active .form__custom-radio,
   .form__choice-item:active .form__custom-checkbox {
@@ -2014,35 +2063,40 @@ img {
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
-  color: #444444; }
+  color: #444444;
+  text-transform: capitalize; }
 
 .form__input-name::-moz-placeholder {
   opacity: 0.3;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
-  color: #444444; }
+  color: #444444;
+  text-transform: capitalize; }
 
 .form__input-name:-ms-input-placeholder {
   opacity: 0.3;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
-  color: #444444; }
+  color: #444444;
+  text-transform: capitalize; }
 
 .form__input-name::-ms-input-placeholder {
   opacity: 0.3;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
-  color: #444444; }
+  color: #444444;
+  text-transform: capitalize; }
 
 .form__input-name::placeholder {
   opacity: 0.3;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
-  color: #444444; }
+  color: #444444;
+  text-transform: capitalize; }
 
 .form__contacts-wrapper {
   position: relative;

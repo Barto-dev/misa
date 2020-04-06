@@ -90,6 +90,43 @@ if (modal && overlay && openModal) {
 
 
 //Local storage
+let orderForm = document.querySelector(".form");
+let orderName = document.querySelector('[name="name"]');
+let orderFamilyName = document.querySelector('[name="family-name"]');
+let orderFatherName = document.querySelector('[name="father-name"]');
 
+if (orderForm) {
+  let isStorageSupport = true;
+  let nameStorage = "";
+  let familyNameStorage = "";
+  let fatherNameStorage = "";
+
+  //Проверяем поддержку localStorage в браузере, по умолчанию в скрипте он определяется как включеный.
+  try {
+    nameStorage = localStorage.getItem("name");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+    //Получаем данные с local storage
+  familyNameStorage = localStorage.getItem("familyName");
+  fatherNameStorage = localStorage.getItem("fatherName");
+
+    //При отправке формы ,если локал localStorage работает, записываем в него значения ФИО
+    orderForm.addEventListener("submit",function () {
+      if (isStorageSupport) {
+        localStorage.setItem("name", orderName.value);
+        localStorage.setItem("familyName", orderFamilyName.value);
+        localStorage.setItem("fatherName", orderFatherName.value);
+      }
+    });
+
+  //Если есть хотябы имя с локал сторедж, при следующей загрузке страницы в поля форм автоматически подставятся
+  // значения
+  if (nameStorage) {
+    orderName.value = nameStorage;
+    orderFamilyName.value = familyNameStorage;
+    orderFatherName.value = fatherNameStorage;
+  }
+}
 
 
